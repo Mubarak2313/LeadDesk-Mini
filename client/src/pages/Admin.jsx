@@ -21,7 +21,7 @@ function Admin() {
 
   const handleStatusChange = async (id, status) => {
     try {
-      await updateLead(id, status);
+      await updateLeads(id, status);
       fetchLeads();
       toast.success("Status Updated")
     } catch (error) {
