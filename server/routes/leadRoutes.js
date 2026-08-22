@@ -5,6 +5,6 @@ const { createLead, getlead, updateLeadStatus, deleteLead } = require("../contro
  router.post("/", createLead);
  router.get("/", getlead)
  router.put("/:id", updateLeadStatus)
-router.put("/:id",deleteLead)
+router.delete("/:id",deleteLead)
 
  module.exports = router;
