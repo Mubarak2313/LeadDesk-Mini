@@ -8,12 +8,8 @@ const connectDB = require("./config/DB");
 const app = express();
 connectDB();
 
-app.use(cors({
-    origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-}));
-
+app.use(cors());
+app.options("*", cors());
 app.use(express.json());
 app.use("/api/leads", leadRoutes);
 app.use("/api/auth", authRoutes);
