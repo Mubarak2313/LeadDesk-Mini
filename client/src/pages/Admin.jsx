@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getLeads, updateLeads, deleteLeads } from "../services/api";
 import { toast } from "react-toastify";
 import Loading from "../component/Loading";
+import { deleteLead } from "../../../server/controllers/leadController";
 
 function Admin() {
   const [leads, setLeads] = useState([]);
