@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const api = axios.create({baseURL: "http://localhost:5000/api",});
+const api = axios.create({baseURL: "https://lead-production-331f.up.railway.app/api",});
 
 export const createLead = (leadData) =>{
     return api.post("leads",leadData)
